@@ -13,6 +13,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/data",(req,res)=>{
     const countries = countryStateCity.Country.getAllCountries();
+    // console.log(countries);
     res.status(200).json({countries});
 })
 
@@ -22,6 +23,7 @@ app.post("/countryIsoCode",async (req,res)=>{
         // console.log(request.body.countryIsoCode);
         countryIsoCode = request.body.countryIsoCode;
         const states = countryStateCity.State.getStatesOfCountry(request.body.countryIsoCode);
+        // console.log(states);
         res.status(200).json({states});
     }
 })
@@ -38,5 +40,5 @@ app.post("/stateIsoCode",async (req,res)=>{
 })
 
 app.listen(4000,()=>{
-    console.log('App is listening on PORT 3000');
+    console.log('App is listening on PORT 4000');
 })
