@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import React from "react";
 import axios from "axios";
 import { useFormik } from "formik";
+import { Link } from "react-router-dom";
 
 const RegistrationForm = () => {
   const [countries, setCountries] = useState([]);
@@ -232,9 +233,7 @@ const RegistrationForm = () => {
         <button className="btn" type="submit">
           Save
         </button>
-        <button className="btn" type="button">
-          Show Data
-        </button>
+        <Link to={'/showdata'} className="linkBtn" style={{textDecoration:"none"}} >Show Data</Link>
       </form>
     </>
   );

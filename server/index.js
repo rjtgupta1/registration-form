@@ -23,6 +23,12 @@ app.get("/data", (req, res) => {
   res.status(200).json({ countries });
 });
 
+app.get("/showdata", async (req,res) => {
+  const data = await form.find({});
+  // console.log(data);
+  res.status(200).json({data});
+})
+
 app.post("/data", async (req, res) => {
   const data = await req.body;
   // console.log(data);

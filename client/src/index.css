@@ -55,7 +55,44 @@ form:hover{
   background-color:azure
 }
 .btn:hover{
-  padding: 20px;
-  border-radius: 0px 25px 0px 25px;
   background-color:bisque;
+}
+
+.linkBtn{
+  width: 220px;
+  height: 160px;
+  padding: 12px 25px;
+  border: 12px;
+  color: black;
+  font-size: small;
+  font-family: Arial;
+  border-radius: 25px 0px 25px 0px;
+  background-color:azure
+}
+
+.linkBtn:hover{
+  background-color:bisque;
+}
+
+/* ============================ Table CSS ========================== */
+
+
+table{
+  width:100%;
+}
+table tr:nth-child(even){
+  background-color: aqua;
+}
+.first-row{
+  background-color: aqua;
+  border-bottom: solid 2px rgb(148, 224, 199);
+}
+table, th, td {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: solid 1px rgb(148, 224, 199);
+  border-collapse: collapse;
+}
+tr:hover{
+  background-color: aquamarine;
 }
