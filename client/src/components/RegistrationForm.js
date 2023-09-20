@@ -24,7 +24,15 @@ const RegistrationForm = () => {
       age: "",
     },
     onSubmit: (values) => {
-      console.log(values);
+      // console.log(values);
+      axios({
+        method:"post",
+        url:"http://localhost:4000/data",
+        data:{...values}
+      })
+      .then((response)=>{
+        alert(response.data.message);
+      })
     },
   });
 
